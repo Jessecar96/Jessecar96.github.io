@@ -95,9 +95,6 @@
 			margin-top: 25px;
 			line-height: 1.5em;
 		}
-		.cf {
-			display: none;
-		}
 		@media (max-width: 375px) {
 			.cloudflare-logo {
 				display: none;
@@ -113,16 +110,9 @@
 		<img src="full-logo2.png" class="logo" />
 		<img src="cf-logo-v-rgb.png" class="cloudflare-logo pull-right" />
 		<div class="error">
-			<h1>500 - Server Error</h1>
-			<h3>Sorry, but Scrap.TF is temporarily unavailable.</h3>
-			<h4>
-				We are doing everything we can to fix any problems we're having.<br/>
-				You can try refreshing in a few minutes,<br/>
-				or check our <a href="http://steamcommunity.com/groups/tf2scrap">Steam Group</a> for any updates.
-			</h4> 
-		</div>
-		<div class="cloudflare">
-			::CLOUDFLARE_ERROR_500S_BOX::
+			<h3>Please complete the following captcha to enter Scrap.TF</h3>
+			<h4>This proves that you are a human and not a bot trying to access our site.</h4>
+			::CAPTCHA_BOX::
 		</div>
 	</div>
 </body>
