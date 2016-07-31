@@ -6,9 +6,14 @@
 	<meta http-equiv="Content-Language" content="en">
 	<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0, user-scalable=no" />
 	<title>Scrap.TF</title>
-	<link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css">
 	<style type="text/css">
+		* {
+			box-sizing: border-box;
+		}
+		html, body, .container {
+			height: 100%;
+			margin: 0;
+		}
 		h1,
 		h2,
 		h3,
@@ -51,8 +56,7 @@
 		  font-size: 12px;
 		}
 		.container {
-			padding-right: 15px;
-			padding-left: 15px;
+			padding-top: 20px;
 			margin-right: auto;
 			margin-left: auto;
 		}
@@ -72,16 +76,26 @@
 			}
 		}
 		body {
-			margin-top: 20px;
 			background: #EEE;
-			font-family: Lato;
+			font-family: Lato, Verdana, sans-serif;
 		}
 		.container {
 			max-width: 750px;
+			display:flex;
+			justify-content:center;
+			align-items:center;
+			flex-direction: column;
+		}
+		header {
+			flex: 0 1 auto;
+			width: 100%;
 		}
 		.error {
 			text-align: center;
-			margin-top: 60px;
+			flex: 1 0 auto;
+			display:flex;
+			justify-content:center;
+			align-items:center;
 		}
 		.logo {
 			width: auto;
@@ -90,15 +104,15 @@
 		.cloudflare-logo {
 			width: auto;
 			height: 50px;
+			float: right;
+		}
+		.cf {
+			margin: 20px auto auto;
+    		width: 300px;
 		}
 		h4 {
 			margin-top: 25px;
 			line-height: 1.5em;
-		}
-		.cf {
-			margin: auto;
-			margin-top: 20px;
-			width: 300px;
 		}
 		@media (max-width: 375px) {
 			.cloudflare-logo {
@@ -112,12 +126,16 @@
 </head>
 <body>
 	<div class="container">
-		<img src="full-logo3.png" class="logo" />
-		<img src="cf-logo-v-rgb.png" class="cloudflare-logo pull-right" />
+		<header>
+			<img src="full-logo3.png" class="logo" />
+			<img src="cf-logo-v-rgb.png" class="cloudflare-logo pull-right" />
+		</header>
 		<div class="error">
-			<h3>Please complete the following captcha to enter Scrap.TF</h3>
-			<h4>This proves that you are a human and not a bot trying to access our site.</h4>
-			<div class="cf">::CAPTCHA_BOX::</div>
+			<div>
+				<h3>Please complete the following captcha to enter Scrap.TF</h3>
+				<h4>This proves that you are a human and not a bot trying to access our site.</h4>
+				<div class="cf">::CAPTCHA_BOX::</div>
+			</div>
 		</div>
 	</div>
 </body>

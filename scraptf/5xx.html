@@ -6,9 +6,14 @@
 	<meta http-equiv="Content-Language" content="en">
 	<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0, user-scalable=no" />
 	<title>Scrap.TF</title>
-	<link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css">
 	<style type="text/css">
+		* {
+			box-sizing: border-box;
+		}
+		html, body, .container {
+			height: 100%;
+			margin: 0;
+		}
 		h1,
 		h2,
 		h3,
@@ -51,8 +56,7 @@
 		  font-size: 12px;
 		}
 		.container {
-			padding-right: 15px;
-			padding-left: 15px;
+			padding-top: 20px;
 			margin-right: auto;
 			margin-left: auto;
 		}
@@ -72,16 +76,26 @@
 			}
 		}
 		body {
-			margin-top: 20px;
 			background: #EEE;
-			font-family: Lato;
+			font-family: Lato, Verdana, sans-serif;
 		}
 		.container {
 			max-width: 750px;
+			display:flex;
+			justify-content:center;
+			align-items:center;
+			flex-direction: column;
+		}
+		header {
+			flex: 0 1 auto;
+			width: 100%;
 		}
 		.error {
 			text-align: center;
-			margin-top: 60px;
+			flex: 1 0 auto;
+			display:flex;
+			justify-content:center;
+			align-items:center;
 		}
 		.logo {
 			width: auto;
@@ -90,6 +104,7 @@
 		.cloudflare-logo {
 			width: auto;
 			height: 50px;
+			float: right;
 		}
 		h4 {
 			margin-top: 25px;
@@ -110,20 +125,24 @@
 </head>
 <body>
 	<div class="container">
-		<img src="full-logo3.png" class="logo" />
-		<img src="cf-logo-v-rgb.png" class="cloudflare-logo pull-right" />
+		<header>
+			<img src="full-logo3.png" class="logo" />
+			<img src="cf-logo-v-rgb.png" class="cloudflare-logo pull-right" />
+		</header>
 		<div class="error">
-			<h1>500 - Server Error</h1>
-			<h3>Sorry, but Scrap.TF is temporarily unavailable.</h3>
-			<h4>
-				We are doing everything we can to fix any problems we're having.<br/>
-				You can try refreshing in a few minutes,<br/>
-				or check our <a href="http://steamcommunity.com/groups/tf2scrap">Steam Group</a> for any updates.
-			</h4> 
+			<div>
+				<h1>500 - Server Error</h1>
+				<h3>Sorry, but Scrap.TF is temporarily unavailable.</h3>
+				<h4>
+					We are doing everything we can to fix any problems we're having.<br/>
+					You can try refreshing in a few minutes,<br/>
+					or check our <a href="http://steamcommunity.com/groups/tf2scrap">Steam Group</a> for any updates.
+				</h4>
+			</div>
 		</div>
-		<div class="cf">
-			::CLOUDFLARE_ERROR_500S_BOX::
-		</div>
+	</div>
+	<div class="cf">
+		::CLOUDFLARE_ERROR_500S_BOX::
 	</div>
 </body>
 </html>
