@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-Language" content="en">
+	<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0, user-scalable=no" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i">
+	<title>Scrap.TF</title>
+	<style type="text/css">
+		* {
+			box-sizing: border-box;
+		}
+		html, body, .container {
+			height: 100%;
+			margin: 0;
+		}
+		.container {
+			padding-top: 20px;
+			margin-right: auto;
+			margin-left: auto;
+		}
+		@media (min-width: 768px) {
+			.container {
+				width: 750px;
+			}
+		}
+		@media (min-width: 992px) {
+			.container {
+				width: 970px;
+			}
+		}
+		@media (min-width: 1200px) {
+			.container {
+				width: 1170px;
+			}
+		}
+		body {
+			background-color: #171b1e;
+			background-image: url('bricks_440.jpg');
+			background-attachment: fixed;
+			background-position: top;
+			background-repeat: no-repeat;
+			font-family: "Helvetica Neue",Roboto,Arial,sans-serif;
+			color: #FFF;
+		}
+		a {
+			color: #EEE;
+			text-decoration: underline;
+		}
+		.container {
+			max-width: 972px;
+		}
+		header {
+			flex: 0 1 auto;
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+		}
+		.error {
+			text-align: center;
+			margin-top: 200px;
+		}
+		.logo {
+			width: auto;
+			height: 50px;
+		}
+		.cloudflare-logo {
+			height: 70px;
+			position: relative;
+			top: -15px;
+			align-self:  flex-end;
+		}
+		h1 {
+			font-size: 40px;
+		}
+		h3 {
+			font-size: 30px;
+		}
+		h4 {
+			font-size: 20px;
+		}
+		.cf {
+			display: none;
+		}
+		@media (min-width: 960px) {
+			.container {
+			    width: 972px;
+			}
+		}
+		@media (max-width: 375px) {
+			.cloudflare-logo {
+				display: none;
+			}
+			body {
+				text-align: center;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<img src="logo_440.svg" class="logo" />
+			<img src="cf-logo-v-rev.svg" class="cloudflare-logo" />
+		</header>
+		<div class="error">
+			<div>
+				<h1>500 - Server Error</h1>
+				<h3>Sorry, but backpack.tf is temporarily unavailable.</h3>
+				<h4>
+					We are doing everything we can to fix any problems we're having.<br/>
+					You can try refreshing in a few minutes,<br/>
+					or check our <a href="https://steamcommunity.com/groups/meetthestats">Steam Group</a> for any updates.
+				</h4>
+			</div>
+		</div>
+	</div>
+	<div class="cf">
+		::CLOUDFLARE_ERROR_500S_BOX::
+	</div>
+</body>
+</html>
