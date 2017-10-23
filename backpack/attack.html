@@ -5,8 +5,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta http-equiv="Content-Language" content="en">
 	<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0, user-scalable=no" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 	<title>Scrap.TF</title>
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 	<style type="text/css">
 		* {
 			box-sizing: border-box;
@@ -14,47 +15,6 @@
 		html, body, .container {
 			height: 100%;
 			margin: 0;
-		}
-		h1,
-		h2,
-		h3,
-		h4,
-		h5,
-		h6{
-		  font-family: inherit;
-		  font-weight: 500;
-		  line-height: 1.1;
-		  color: inherit;
-		}
-		h1,
-		h2,
-		h3 {
-		  margin-top: 20px;
-		  margin-bottom: 10px;
-		}
-		h4,
-		h5,
-		h6{
-		  margin-top: 10px;
-		  margin-bottom: 10px;
-		}
-		h1 {
-		  font-size: 36px;
-		}
-		h2 {
-		  font-size: 30px;
-		}
-		h3 {
-		  font-size: 24px;
-		}
-		h4 {
-		  font-size: 18px;
-		}
-		h5 {
-		  font-size: 14px;
-		}
-		h6 {
-		  font-size: 12px;
 		}
 		.container {
 			padding-top: 20px;
@@ -77,42 +37,57 @@
 			}
 		}
 		body {
-			background: #EEE;
-			font-family: Lato, Verdana, sans-serif;
+			background-color: #171b1e;
+			background-image: url('bricks_440.jpg');
+			background-attachment: fixed;
+			background-position: top;
+			background-repeat: no-repeat;
+			font-family: "Helvetica Neue",Roboto,Arial,sans-serif;
+			color: #FFF;
+		}
+		a {
+			color: #EEE;
+			text-decoration: underline;
 		}
 		.container {
-			max-width: 750px;
-			display:flex;
-			justify-content:center;
-			align-items:center;
-			flex-direction: column;
+			max-width: 972px;
 		}
 		header {
 			flex: 0 1 auto;
 			width: 100%;
+			display: flex;
+			justify-content: space-between;
 		}
 		.error {
 			text-align: center;
-			flex: 1 0 auto;
-			display:flex;
-			justify-content:center;
-			align-items:center;
+			margin-top: 200px;
 		}
 		.logo {
 			width: auto;
 			height: 50px;
 		}
 		.cloudflare-logo {
-			width: auto;
-			height: 50px;
-			float: right;
+			height: 70px;
+			position: relative;
+			top: -15px;
+			align-self:  flex-end;
+		}
+		h1 {
+			font-size: 40px;
+		}
+		h3 {
+			font-size: 30px;
 		}
 		h4 {
-			margin-top: 25px;
-			line-height: 1.5em;
+			font-size: 20px;
 		}
 		.cf {
 			display: none;
+		}
+		@media (min-width: 960px) {
+			.container {
+			    width: 972px;
+			}
 		}
 		@media (max-width: 375px) {
 			.cloudflare-logo {
@@ -127,14 +102,14 @@
 <body>
 	<div class="container">
 		<header>
-			<img src="full-logo3.png" class="logo" />
-			<img src="cf-logo-v-rgb.png" class="cloudflare-logo pull-right" />
+			<img src="logo_440.svg" class="logo" />
+			<img src="cf-logo-v-rev.svg" class="cloudflare-logo" />
 		</header>
 		<div class="error">
-			<div style="margin-top: -80px;">
+			<div>
 				<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
 				<h1>Please Wait</h1>
-				<h3>We're checking your browser before continuing to Scrap.TF</h3>
+				<h3>We're checking your browser before continuing to backpack.tf</h3>
 				<h4>This should only take a moment</h4>
 			</div>
 		</div>
